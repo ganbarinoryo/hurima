@@ -1,0 +1,15 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #fe5858;
+    height: 70px;
+}
+
+.header__inner a {
+    font-size: 25px;
+    font-weight: bold;
+}
+
