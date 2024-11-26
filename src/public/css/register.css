@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
 }
@@ -9,11 +10,13 @@ html, body {
     height: 80px;
 }
 
-.header__inner img {
+.header__inner {
     padding-top: 19px;
-    padding-left: 25px;
+}
+
+.header__inner img {
     max-width: 370px;
-    height: 42px;
+    padding-left: 25px;
 }
 
 .flex__register-form__heading {
@@ -57,7 +60,7 @@ html, body {
     margin-top: -20px;
     padding: 10px;
     width: 680px;
-    height: 40px;
+    height: 60px;
     border: 1px solid #5F5F5F;
     border-radius: 3px;
 
@@ -72,7 +75,8 @@ html, body {
     width: 100%;
     padding: 13px;
     font-weight: 700;
-    background: #FF5555;;
+    background: #FF5555;
+    ;
     color: white;
     font-size: 26px;
     border: none;
@@ -92,5 +96,5 @@ html, body {
     text-decoration: none;
     color: #0073CC;
     font-size: 20px;
-    
+
 }
