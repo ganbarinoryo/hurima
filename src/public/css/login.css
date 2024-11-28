@@ -1,5 +1,4 @@
-html,
-body {
+html,body {
     margin: 0;
     padding: 0;
 }
@@ -15,8 +14,9 @@ body {
 }
 
 .header__inner img {
-    max-width: 370px;
     padding-left: 25px;
+    max-width: 370px;
+    height: 42px;
 }
 
 .flex__login-form__heading {
@@ -76,7 +76,6 @@ body {
     padding: 13px;
     font-weight: 700;
     background: #FF5555;
-    ;
     color: white;
     font-size: 26px;
     border: none;

@@ -16,3 +16,5 @@ use App\Http\Controllers\AuthController;
 
 // 会員登録ページ（登録フォームの表示）
 Route::get('/register', [AuthController::class, 'register']);
+
+Route::get('/login', [AuthController::class, 'login']);
