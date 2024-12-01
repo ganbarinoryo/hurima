@@ -29,7 +29,7 @@
             <div class="form__group-content">
                 <p>郵便番号</p>
                 <div class="form__input--text">
-                    <input type="text" id="postal_code" name="postal_code" value="{{ old('name') }}" class="@error('name') is-invalid @enderror"/>
+                    <input type="text" id="postal_code" name="postal_code" value="{{ old('postal_code') }}" class="@error('postal_code') is-invalid @enderror"/>
                 </div>
                 <div class="form__error">
                 <!--バリデーション追加してから記述-->
@@ -41,7 +41,7 @@
             <div class="form__group-content">
                 <p>住所</p>
                 <div class="form__input--text">
-                    <input type="text" id="address" name="address" value="{{ old('email') }}" class="@error('email') is-invalid @enderror"/>
+                    <input type="text" id="address" name="address" value="{{ old('address') }}" class="@error('address') is-invalid @enderror"/>
                 </div>
                 <div class="form__error">
                 <!--バリデーション追加してから記述-->
@@ -53,7 +53,7 @@
             <div class="form__group-content">
                 <p>建物名</p>
                 <div class="form__input--text">
-                    <input type="text" id="building_name" name="building_name" value="{{ old('email') }}" class="@error('email') is-invalid @enderror"/>
+                    <input type="text" id="building_name" name="building_name" value="{{ old('building_name') }}" class="@error('building_name') is-invalid @enderror"/>
                 </div>
                 <div class="form__error">
                 <!--バリデーション追加してから記述-->
