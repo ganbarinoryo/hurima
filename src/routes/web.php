@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AddressController;
+use App\Http\Controllers\SellController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,12 @@ use App\Http\Controllers\AuthController;
 
 // 会員登録ページ（登録フォームの表示）
 Route::get('/register', [AuthController::class, 'register']);
+
+// ログインページ（ログインフォームの表示）
+Route::get('/login', [AuthController::class, 'login']);
+
+// 住所変更ページ（住所の変更フォームの表示）
+Route::get('/purchase/address', [AddressController::class, 'address'])->name('address');
+
+// 出品ページ（出品フォームの表示）
+Route::get('sell', [SellController::class, 'sell'])->name('sell');
