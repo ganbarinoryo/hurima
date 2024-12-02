@@ -36,12 +36,18 @@ h2 {
     /* ブロック要素に変更して、親要素の幅を使わせる */
     width: 100%;
     /* 幅を100%に設定して、フォームと同じ幅に */
-    border-bottom: 2px solid #4CAF50;
+    border-bottom: 1px solid #5F5F5F;
     /* 下線を設定 */
     padding-bottom: 5px;
     /* 下線との間隔を調整 */
     margin-bottom: 20px;
     /* 見出しとフォームとの間隔 */
+    color: #5F5F5F;
+    padding-top: 10px;
+}
+
+h3 {
+    padding-bottom: 5px;
 }
 
 /* 商品画像フォームのラベル */
@@ -78,6 +84,24 @@ h2 {
     align-items: center;
 }
 
+.textarea--description {
+    margin-top: -20px;
+    width: 100%;
+    /* 幅をフォーム全体に広げる */
+    min-height: 125px;
+    /* 縦幅を広げる */
+
+    /* 内側の余白を追加 */
+    border: 1px solid #5F5F5F;
+    /* 枠線 */
+    border-radius: 5px;
+    /* 角を丸める */
+    font-size: 16px;
+    /* テキストサイズを調整 */
+    resize: vertical;
+    /* ユーザーが縦方向に調整可能にする */
+}
+
 /* ファイル選択ボタンのホバー時のスタイル */
 .file-label:hover {
     background-color: #ffcccc;
@@ -87,7 +111,7 @@ h2 {
 /* ファイル選択エリアの点線の枠 */
 .form__input--img {
     margin-top: -20px;
-    border: 2px dotted #6b6b6b;
+    border: 1px dotted #5F5F5F;
     padding: 50px;
     border-radius: 8px;
 }
@@ -127,11 +151,48 @@ h2 {
     margin-top: -20px;
     padding: 10px;
     width: 680px;
-    height: 60px;
+    height: 45px;
     border: 1px solid #5F5F5F;
     border-radius: 3px;
-
     appearance: none;
+}
+
+.input-with-symbol {
+    position: relative;
+    /* 親要素を基準に配置 */
+    width: 100%;
+    /* 必要に応じて調整 */
+}
+
+.input-with-symbol input {
+    padding-left: 30px;
+    /* 左側に余白を追加 */
+    width: 100%;
+    /* 入力欄の幅を100%に調整 */
+    border: 1px solid #5F5F5F;
+    /* 枠線 */
+    border-radius: 5px;
+    /* 角を丸くする */
+    font-size: 16px;
+}
+
+.input-with-symbol::before {
+    content: "¥";
+    /* 「￥」を表示 */
+    position: absolute;
+    /* 入力欄内の特定位置に配置 */
+    top: 50%;
+    /* 縦の中央に配置 */
+    left: 10px;
+    /* 入力欄の左側に配置 */
+    transform: translateY(-60%);
+    /* 完全に中央揃え */
+    color: #000000;
+    /* 文字色 */
+    font-size: 24px;
+    /* フォントサイズ調整 */
+    pointer-events: none;
+    /* ユーザー操作を無効化 */
 }
 
 .form__button {

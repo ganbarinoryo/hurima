@@ -27,7 +27,7 @@
 
         <div class="form__group">
             <div class="form__group-content">
-                <p>商品画像</p>
+                <h3>商品画像</h3>
                 <div class="form__input--img">
                 <!-- ファイル選択用のカスタムラベル -->
                     <input class="input--img"type="file" id="product_image" name="product_image" accept="image/*" class="@error('product_image') is-invalid @enderror" hidden/>
@@ -44,7 +44,7 @@
 
         <div class="form__group">
             <div class="form__group-content">
-                <p>カテゴリー</p>
+                <h3>カテゴリー</h3>
                 <div class="form__input--text">
                     <input type="text" id="postal_code" name="postal_code" value="{{ old('postal_code') }}" class="@error('postal_code') is-invalid @enderror"/>
                 </div>
@@ -56,7 +56,7 @@
 
         <div class="form__group">
             <div class="form__group-content">
-                <p>商品の状態</p>
+                <h3>商品の状態</h3>
                 <div class="form__input--text">
                     <input type="text" id="address" name="address" value="{{ old('address') }}" class="@error('address') is-invalid @enderror"/>
                 </div>
@@ -70,7 +70,7 @@
 
         <div class="form__group">
             <div class="form__group-content">
-                <p>商品名</p>
+                <h3>商品名</h3>
                 <div class="form__input--text">
                     <input type="text" id="building_name" name="building_name" value="{{ old('building_name') }}" class="@error('building_name') is-invalid @enderror"/>
                 </div>
@@ -82,29 +82,43 @@
 
         <div class="form__group">
             <div class="form__group-content">
-                <p>説明文</p>
-                <div class="form__input--text">
-                    <input type="text" id="building_name" name="building_name" value="{{ old('building_name') }}" class="@error('building_name') is-invalid @enderror"/>
-                </div>
+                <h3>商品の説明</h3>
+                <div class="form__input--description">
+                    <textarea 
+                    id="product_description" 
+                    name="product_description" 
+                    class="textarea--description @error('product_description') is-invalid @enderror" 
+                    rows="5">
+                    </textarea>
+                    </div>
                 <div class="form__error">
-                <!--バリデーション追加してから記述-->
+                <!-- バリデーションエラーがあれば表示 -->
                 </div>
             </div>
         </div>
+
 
         <h2>販売価格</h2>
 
         <div class="form__group">
             <div class="form__group-content">
-                <p>販売価格</p>
+                <h3>販売価格</h3>
                 <div class="form__input--text">
-                    <input type="text" id="building_name" name="building_name" value="{{ old('building_name') }}" class="@error('building_name') is-invalid @enderror"/>
-                </div>
-                <div class="form__error">
-                <!--バリデーション追加してから記述-->
+                    <div class="input-with-symbol">
+                    <input 
+                    type="text" 
+                    id="building_name" 
+                    name="building_name" 
+                    value="{{ old('building_name') }}" 
+                    class="@error('building_name') is-invalid @enderror"/>
+                    </div>
+                    </div>
+                    <div class="form__error">
+                    <!-- バリデーション追加してから記述 -->
                 </div>
             </div>
         </div>
+
 
         <div class="form__button">
             <button class="form__button-submit" type="submit">更新する
