@@ -78,7 +78,7 @@ html,body {
     background: #FF5555;
     color: white;
     font-size: 26px;
-    border: none;
+    border: 1px solid #FF5555;
     border-radius: 4px;
     cursor: pointer;
 }

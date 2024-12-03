@@ -60,8 +60,5 @@
 
     </form>
     </div><!--login__contentの終わり-->
-
-    <footer><footer>
-    
 </body>
 </html>
