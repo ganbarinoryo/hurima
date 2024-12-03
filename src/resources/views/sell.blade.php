@@ -46,7 +46,7 @@
             <div class="form__group-content">
                 <h3>カテゴリー</h3>
                 <div class="form__input--text">
-                    <input type="text" id="postal_code" name="postal_code" value="{{ old('postal_code') }}" class="@error('postal_code') is-invalid @enderror"/>
+                    <input type="text" id="category" name="category" value="{{ old('category') }}" class="@error('category') is-invalid @enderror"/>
                 </div>
                 <div class="form__error">
                 <!--バリデーション追加してから記述-->
@@ -58,7 +58,7 @@
             <div class="form__group-content">
                 <h3>商品の状態</h3>
                 <div class="form__input--text">
-                    <input type="text" id="address" name="address" value="{{ old('address') }}" class="@error('address') is-invalid @enderror"/>
+                    <input type="text" id="condition" name="condition" value="{{ old('condition') }}" class="@error('condition') is-invalid @enderror"/>
                 </div>
                 <div class="form__error">
                 <!--バリデーション追加してから記述-->
@@ -72,7 +72,7 @@
             <div class="form__group-content">
                 <h3>商品名</h3>
                 <div class="form__input--text">
-                    <input type="text" id="building_name" name="building_name" value="{{ old('building_name') }}" class="@error('building_name') is-invalid @enderror"/>
+                    <input type="text" id="product_name" name="product_name" value="{{ old('product_name') }}" class="@error('product_name') is-invalid @enderror"/>
                 </div>
                 <div class="form__error">
                 <!--バリデーション追加してから記述-->
@@ -106,11 +106,11 @@
                 <div class="form__input--text">
                     <div class="input-with-symbol">
                     <input 
-                    type="text" 
-                    id="building_name" 
-                    name="building_name" 
-                    value="{{ old('building_name') }}" 
-                    class="@error('building_name') is-invalid @enderror"/>
+                    type="number" 
+                    id="price" 
+                    name="price" 
+                    value="{{ old('price') }}" 
+                    class="@error('price') is-invalid @enderror"/>
                     </div>
                     </div>
                     <div class="form__error">
