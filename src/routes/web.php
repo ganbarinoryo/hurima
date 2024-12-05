@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AddressController;
 use App\Http\Controllers\SellController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TopController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +32,6 @@ Route::get('sell', [SellController::class, 'sell'])->name('sell');
 
 // プロフィール設定ページ（プロフィール設定フォームの表示）
 Route::get('/mypage/profile', [ProfileController::class, 'profile']);
+
+// トップ（ログイン前）ページ（トップページの表示）
+Route::get('top', [TopController::class, 'top']);
