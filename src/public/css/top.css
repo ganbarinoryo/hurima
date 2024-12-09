@@ -48,7 +48,7 @@ body {
 
 .search-input::placeholder {
     color: #000000;
-    font-size: 17px;
+    font-size: 17.5px;
 }
 
 /* ナビゲーションメニューのスタイル */
@@ -62,19 +62,18 @@ body {
     padding-right: 27px;
 }
 
-/* ログアウト*/
-.nav__link__logout {
-    padding: 10px;
-    font-size: 17px;
+.nav__link__login {
+    padding: 10px 30px;
+    font-size: 17.5px;
     color: white;
     text-decoration: none;
     white-space: nowrap;
 }
 
-.nav__link__mypage {
-    padding: 10px 20px;
+.nav__link__register {
+    padding: 10px 30px;
     margin-right: 70px;
-    font-size: 17px;
+    font-size: 17.5px;
     color: white;
     text-decoration: none;
     white-space: nowrap;
@@ -96,4 +95,59 @@ body {
 
 .nav__link:hover {
     text-decoration: underline;
+}
+
+/* タブのスタイル */
+.tabs {
+    display: flex;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #5F5F5F;
+}
+
+.tab.active {
+    color: #ff5555;
+    padding-left: 125px;
+}
+
+.tab {
+    padding-left: 80px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+/* 商品グリッドのスタイル */
+.products {
+    display: flex;
+    gap: 65px;
+    background-color: aqua;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-right: 90px;
+    margin-bottom: 50px;
+    margin-left: 90px;
+}
+
+.product-item {
+    background-color: #5F5F5F;
+    min-width: 200px;
+    max-width: 200px;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 25px;
+}
+
+/* アイテム内の画像 */
+.product-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.product-item p {
+    font-size: 14px;
+    margin: 5px 0;
 }
