@@ -97,6 +97,57 @@ body {
     text-decoration: underline;
 }
 
+/* アイコン表示エリアのスタイル */
+.icon {
+    display: inline-block;
+    white-space: nowrap;
+    width: 150px;
+    height: 150px;
+    background-color: #d3d3d3;
+    /* 初期状態の背景色 */
+    border-radius: 50%;
+    /* 丸くする */
+    margin-right: 25px;
+    /* ボタンとアイコンの間隔 */
+    overflow: hidden;
+    /* 画像がアイコンの枠内に収まるようにする */
+}
+
+.icon img {
+    white-space: nowrap;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 画像が枠内に収まるように調整 */
+}
+
+/* アイコン画像フォームの中央配置 */
+.form__input--icon {
+    display: flex;
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.profile-edit-button {
+    /* 添付画像のスタイルを参考に、ボタンの見た目を調整してください */
+    margin-left: 200px;
+    background-color: #ffffff;
+    color: #ff5858;
+    font-size: 15px;
+    font-weight: bolder;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 2px solid #ff5858;
+    /* ここに、添付画像のフォントサイズ、マージンなど、詳細なスタイルを追加してください */
+}
+
+.profile-edit-button:hover {
+    background-color: #e0e0e0;
+}
+
 /* タブのスタイル */
 .tabs {
     display: flex;

@@ -6,6 +6,7 @@ use App\Http\Controllers\AddressController;
 use App\Http\Controllers\SellController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TopController;
+use App\Http\Controllers\MypageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,3 +36,6 @@ Route::get('/mypage/profile', [ProfileController::class, 'profile']);
 
 // トップ（ログイン前）ページ（トップページの表示）
 Route::get('top', [TopController::class, 'top']);
+
+// マイページ（マイページの表示）
+Route::get('mypage/mypage', [MypageController::class, 'mypage']);
