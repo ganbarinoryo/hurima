@@ -1,9 +1,11 @@
+/* 基本スタイル */
 html,
 body {
     margin: 0;
     padding: 0;
 }
 
+/* ヘッダー */
 .header {
     background-color: black;
     max-width: 100%;
@@ -16,7 +18,6 @@ body {
 }
 
 .header__logo img {
-    float: left;
     max-width: 370px;
     height: 42px;
 }
@@ -31,7 +32,6 @@ body {
 .search-bar {
     flex-wrap: nowrap;
     flex-grow: 1;
-    /* 検索バーを中央に広げる */
     margin: 0 60px;
 }
 
@@ -51,18 +51,17 @@ body {
     font-size: 17.5px;
 }
 
-/* ナビゲーションメニューのスタイル */
+/* ナビゲーションメニュー */
 .nav {
     display: flex;
-    /* 横並びにする */
     align-items: center;
-    /* アイテムを縦方向に中央揃え */
     justify-content: flex-end;
-    /* 右端に配置 */
     padding-right: 27px;
 }
 
-.nav__link__login {
+/* ナビゲーションリンク */
+.nav__link__login,
+.nav__link__register {
     padding: 10px 30px;
     font-size: 17.5px;
     color: white;
@@ -71,82 +70,109 @@ body {
 }
 
 .nav__link__register {
-    padding: 10px 30px;
     margin-right: 70px;
-    font-size: 17.5px;
-    color: white;
-    text-decoration: none;
-    white-space: nowrap;
 }
 
 /* 出品リンクのスタイル */
 .nav__link__sell {
     color: #000000;
     background-color: #fff;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 23px;
+    padding: 10px 20px 10px 23px;
     font-size: 17px;
     border-radius: 5px;
     text-decoration: none;
     white-space: nowrap;
 }
 
+/* リンクのホバー効果 */
 .nav__link:hover {
     text-decoration: underline;
 }
 
-/* アイコン表示エリアのスタイル */
-.icon {
-    display: inline-block;
-    white-space: nowrap;
-    width: 150px;
-    height: 150px;
-    background-color: #d3d3d3;
-    /* 初期状態の背景色 */
-    border-radius: 50%;
-    /* 丸くする */
-    margin-right: 25px;
-    /* ボタンとアイコンの間隔 */
-    overflow: hidden;
-    /* 画像がアイコンの枠内に収まるようにする */
-}
 
-.icon img {
-    white-space: nowrap;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* 画像が枠内に収まるように調整 */
-}
 
-/* アイコン画像フォームの中央配置 */
-.form__input--icon {
-    display: flex;
-    white-space: nowrap;
-    justify-content: center;
-    align-items: center;
+
+
+/* ユーザー情報を横並びにするためのスタイル */
+.user_data {
     padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    /* 横並びにする */
+    align-items: center;
+    /* アイコン、名前、ボタンを縦方向に中央揃え */
+    gap: 50px;
+    /* アイコンと他の要素の間隔を調整 */
+    white-space: nowrap;
+
 }
 
-.profile-edit-button {
-    /* 添付画像のスタイルを参考に、ボタンの見た目を調整してください */
+/* ユーザーアイコンのスタイル */
+.user_icon {
+    min-width: 150px;
+    min-height: 150px;
+    /* アイコンのサイズ */
+    border-radius: 50%;
+    /* 丸いアイコンにする */
+    background-color: #d3d3d3;
+    /* アイコンがない場合の背景色 (グレー) */
+    display: flex;
+    justify-content: center;
+    /* アイコンがない場合でも中央揃え */
+    align-items: center;
+    /* アイコンがない場合でも中央揃え */
+}
+
+.user_icon img {
+    width: 100%;
+    /* アイコン画像が指定されている場合に、親要素に合わせて広がる */
+    height: 100%;
+    border-radius: 50%;
+    /* 丸いアイコンにする */
+    object-fit: cover;
+    /* アスペクト比を保って切り抜き */
+}
+
+/* ユーザー名のスタイル */
+.user_name {
+    font-size: 36px;
+    /* ユーザー名のフォントサイズ */
+    font-weight: 700;
+    /* ユーザー名の太さ */
+}
+
+/* プロフィール編集ボタンのスタイル */
+.profile_edit .edit_button {
     margin-left: 200px;
     background-color: #ffffff;
-    color: #ff5858;
-    font-size: 15px;
-    font-weight: bolder;
-    padding: 10px 25px;
+    /* ボタンの背景色 */
+    color: #FF5555;
+    /* ボタンの文字色 */
+    font-weight: 700;
+    /* 文字の太さ */
+    border: 2px solid #FF5555;
+    /* ボタンの枠線の色 */
+    padding: 12px 25px;
+    /* ボタンのパディング */
+    border-radius: 10px;
+    /* 角を丸くする */
     text-decoration: none;
-    border-radius: 8px;
-    border: 2px solid #ff5858;
-    /* ここに、添付画像のフォントサイズ、マージンなど、詳細なスタイルを追加してください */
+    /* リンクの下線を消す */
+    font-size: 26px;
+    /* ボタンの文字サイズ */
+    transition: background-color 0.3s;
+    /* 背景色のホバー時の遷移 */
 }
 
-.profile-edit-button:hover {
-    background-color: #e0e0e0;
+/* プロフィール編集ボタンにホバーした時のスタイル */
+.profile_edit .edit_button:hover {
+    background-color: #0056b3;
+    /* ホバー時の背景色 */
 }
+
+
+
+
 
 /* タブのスタイル */
 .tabs {
@@ -157,11 +183,6 @@ body {
     border-bottom: 2px solid #5F5F5F;
 }
 
-.tab.active {
-    color: #ff5555;
-    padding-left: 125px;
-}
-
 .tab {
     padding-left: 80px;
     font-size: 24px;
@@ -170,28 +191,32 @@ body {
     text-decoration: none;
 }
 
+.tab.active {
+    color: #ff5555;
+    padding-left: 125px;
+}
+
 /* 商品グリッドのスタイル */
 .products {
     display: flex;
     gap: 60px;
-    background-color: rgb(255, 255, 255);
     flex-wrap: wrap;
     margin-top: 50px;
     margin-right: 90px;
     margin-bottom: 50px;
     margin-left: 90px;
+    background-color: rgb(255, 255, 255);
 }
 
+/* 商品アイテム */
 .product-item {
     background-color: #a0a0a0;
     min-width: 380px;
-    max-width: 380px;
-    width: 380px;
-    height: 380px;
+    min-height: 380px;
     margin-bottom: 25px;
+    /* 固定のサイズ */
 }
 
-/* アイテム内の画像 */
 .product-item img {
     width: 100%;
     height: auto;

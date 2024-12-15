@@ -1,9 +1,11 @@
+/* 基本スタイル */
 html,
 body {
     margin: 0;
     padding: 0;
 }
 
+/* ヘッダー */
 .header {
     background-color: black;
     max-width: 100%;
@@ -16,7 +18,6 @@ body {
 }
 
 .header__logo img {
-    float: left;
     max-width: 370px;
     height: 42px;
 }
@@ -31,7 +32,6 @@ body {
 .search-bar {
     flex-wrap: nowrap;
     flex-grow: 1;
-    /* 検索バーを中央に広げる */
     margin: 0 60px;
 }
 
@@ -51,18 +51,17 @@ body {
     font-size: 17.5px;
 }
 
-/* ナビゲーションメニューのスタイル */
+/* ナビゲーションメニュー */
 .nav {
     display: flex;
-    /* 横並びにする */
     align-items: center;
-    /* アイテムを縦方向に中央揃え */
     justify-content: flex-end;
-    /* 右端に配置 */
     padding-right: 27px;
 }
 
-.nav__link__login {
+/* ナビゲーションリンク */
+.nav__link__login,
+.nav__link__register {
     padding: 10px 30px;
     font-size: 17.5px;
     color: white;
@@ -71,28 +70,21 @@ body {
 }
 
 .nav__link__register {
-    padding: 10px 30px;
     margin-right: 70px;
-    font-size: 17.5px;
-    color: white;
-    text-decoration: none;
-    white-space: nowrap;
 }
 
 /* 出品リンクのスタイル */
 .nav__link__sell {
     color: #000000;
     background-color: #fff;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 23px;
+    padding: 10px 20px 10px 23px;
     font-size: 17px;
     border-radius: 5px;
     text-decoration: none;
     white-space: nowrap;
 }
 
+/* リンクのホバー効果 */
 .nav__link:hover {
     text-decoration: underline;
 }
@@ -106,11 +98,6 @@ body {
     border-bottom: 2px solid #5F5F5F;
 }
 
-.tab.active {
-    color: #ff5555;
-    padding-left: 125px;
-}
-
 .tab {
     padding-left: 80px;
     font-size: 24px;
@@ -119,28 +106,32 @@ body {
     text-decoration: none;
 }
 
+.tab.active {
+    color: #ff5555;
+    padding-left: 125px;
+}
+
 /* 商品グリッドのスタイル */
 .products {
     display: flex;
     gap: 60px;
-    background-color: rgb(255, 255, 255);
     flex-wrap: wrap;
     margin-top: 50px;
     margin-right: 90px;
     margin-bottom: 50px;
     margin-left: 90px;
+    background-color: rgb(255, 255, 255);
 }
 
+/* 商品アイテム */
 .product-item {
     background-color: #a0a0a0;
-    min-width: 380px;
-    max-width: 380px;
     width: 380px;
     height: 380px;
     margin-bottom: 25px;
+    /* 固定のサイズ */
 }
 
-/* アイテム内の画像 */
 .product-item img {
     width: 100%;
     height: auto;

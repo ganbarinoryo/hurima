@@ -22,8 +22,8 @@
 
             <!-- ナビゲーションメニュー -->
             <nav class="nav">
-                <a href="#" class="nav__link__login">ログアウト</a>
-                <a href="#" class="nav__link__register">マイページ</a>
+                <a href="#" class="nav__link__login">ログイン</a>
+                <a href="#" class="nav__link__register">会員登録</a>
                 <a href="" class="nav__link__sell">出品</a>
             </nav>
 
@@ -32,27 +32,30 @@
 
     <main class="main-content">
 
-        <div class="form__group">
-    <div class="form__group-content">
-        <div class="form__input--icon">
-            <!-- 商品画像表示エリア（画像が選択されるとここに表示される） -->
-            <div class="icon">
-                <img id="image-icon" src="" alt="選択された画像" style="display: none;"/> <!-- 初期状態は非表示 -->
-            </div>
+<!--ユーザーアイコン、ユーザー名、プロフィール編集先に遷移するボタン-->
 
-            <h2>ユーザー名</h2>
-            <div class="profile-edit-section">
-    <a href="" class="profile-edit-button">プロフィールを編集</a>
+    <div class="user_data">
+    <!-- ユーザーアイコン -->
+        <div class="user_icon">
+            <img src="<!--画像表示のルートを入れる-->" alt="">
         </div>
-        <div class="form__error">
-            <!-- バリデーションエラーメッセージ -->
-        </div>
+    
+    <!-- ユーザー名 -->
+    <div class="user_name">
+        <p><!--ユーザー名を表示するルートを入れる-->ユーザー名</p>
+    </div>
+    
+    <!-- プロフィール編集ページへのリンク -->
+    <div class="profile_edit">
+        <a href="" class="edit_button">プロフィールを編集</a>
     </div>
 </div>
 
+
+
         <section class="tabs">
-            <a class="tab active" href="">出品した商品</a>
-            <a class="tab" href="">購入した商品</a>
+            <a class="tab active" href="">おすすめ</a>
+            <a class="tab" href="">マイリスト</a>
         </section>
 
         <section class="products">
