@@ -89,6 +89,91 @@ body {
     text-decoration: underline;
 }
 
+
+
+
+
+/* ユーザー情報を横並びにするためのスタイル */
+.user_data {
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    /* 横並びにする */
+    align-items: center;
+    /* アイコン、名前、ボタンを縦方向に中央揃え */
+    gap: 50px;
+    /* アイコンと他の要素の間隔を調整 */
+    white-space: nowrap;
+
+}
+
+/* ユーザーアイコンのスタイル */
+.user_icon {
+    min-width: 150px;
+    min-height: 150px;
+    /* アイコンのサイズ */
+    border-radius: 50%;
+    /* 丸いアイコンにする */
+    background-color: #d3d3d3;
+    /* アイコンがない場合の背景色 (グレー) */
+    display: flex;
+    justify-content: center;
+    /* アイコンがない場合でも中央揃え */
+    align-items: center;
+    /* アイコンがない場合でも中央揃え */
+}
+
+.user_icon img {
+    width: 100%;
+    /* アイコン画像が指定されている場合に、親要素に合わせて広がる */
+    height: 100%;
+    border-radius: 50%;
+    /* 丸いアイコンにする */
+    object-fit: cover;
+    /* アスペクト比を保って切り抜き */
+}
+
+/* ユーザー名のスタイル */
+.user_name {
+    font-size: 36px;
+    /* ユーザー名のフォントサイズ */
+    font-weight: 700;
+    /* ユーザー名の太さ */
+}
+
+/* プロフィール編集ボタンのスタイル */
+.profile_edit .edit_button {
+    margin-left: 200px;
+    background-color: #ffffff;
+    /* ボタンの背景色 */
+    color: #FF5555;
+    /* ボタンの文字色 */
+    font-weight: 700;
+    /* 文字の太さ */
+    border: 2px solid #FF5555;
+    /* ボタンの枠線の色 */
+    padding: 12px 25px;
+    /* ボタンのパディング */
+    border-radius: 10px;
+    /* 角を丸くする */
+    text-decoration: none;
+    /* リンクの下線を消す */
+    font-size: 26px;
+    /* ボタンの文字サイズ */
+    transition: background-color 0.3s;
+    /* 背景色のホバー時の遷移 */
+}
+
+/* プロフィール編集ボタンにホバーした時のスタイル */
+.profile_edit .edit_button:hover {
+    background-color: #0056b3;
+    /* ホバー時の背景色 */
+}
+
+
+
+
+
 /* タブのスタイル */
 .tabs {
     display: flex;
@@ -126,8 +211,8 @@ body {
 /* 商品アイテム */
 .product-item {
     background-color: #a0a0a0;
-    width: 380px;
-    height: 380px;
+    min-width: 380px;
+    min-height: 380px;
     margin-bottom: 25px;
     /* 固定のサイズ */
 }

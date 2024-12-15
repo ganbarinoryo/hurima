@@ -89,56 +89,87 @@ body {
     text-decoration: underline;
 }
 
-/* タブのスタイル */
-.tabs {
+
+
+/* メインのレイアウト */
+main {
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
     display: flex;
-    width: 100%;
-    padding-top: 50px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #5F5F5F;
-}
-
-.tab {
-    padding-left: 80px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    text-decoration: none;
-}
-
-.tab.active {
-    color: #ff5555;
-    padding-left: 125px;
-}
-
-/* 商品グリッドのスタイル */
-.products {
-    display: flex;
-    gap: 60px;
-    flex-wrap: wrap;
-    margin-top: 50px;
-    margin-right: 90px;
-    margin-bottom: 50px;
-    margin-left: 90px;
-    background-color: rgb(255, 255, 255);
 }
 
 /* 商品アイテム */
-.product-item {
+.item__image {
     background-color: #a0a0a0;
-    width: 380px;
-    height: 380px;
+    min-width: 500px;
+    height: 500px;
     margin-bottom: 25px;
     /* 固定のサイズ */
 }
 
-.product-item img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+/* 購入ボタンのレイアウト */
+.form__button-submit {
+    width: 500px;
+    height: 57px;
+    padding: 13px;
+    font-weight: bold;
+    background: #FF5555;
+    color: white;
+    font-size: 26px;
+    border: 1px solid #FF5555;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-.product-item p {
-    font-size: 14px;
-    margin: 5px 0;
+/* 商品説明レイアウト */
+.item__detail {
+    margin-top: -37px;
+    margin-left: 130px;
+    background-color: rgb(255, 255, 255);
+    min-width: 500px;
+    min-height: 100%;
+    font-size: 20px;
 }
+
+/* 説明文テキストエリア */
+.textarea--description {
+    margin-top: -20px;
+    width: 100%;
+    min-height: 125px;
+    border: 1px solid #5F5F5F;
+    /* 枠線 */
+    border-radius: 5px;
+    /* 角を丸める */
+    font-size: 16px;
+    /* テキストサイズ */
+    resize: vertical;
+    /* ユーザーが縦方向に調整可能 */
+}
+
+.item__category p {
+    background-color: #D9D9D9;
+    padding-top: 5px;
+    width: 100px;
+    text-align: center;
+    border-radius: 50px;
+    margin-left: 30px;
+}
+
+.item__condition p {
+    padding-top: 5px;
+    width: 100px;
+    text-align: center;
+    border-radius: 50px;
+    margin-left: 30px;
+}
+
+.item__category {
+    display: flex;
+    
+}
+
+.item__condition {
+    display: flex;
+}
+
