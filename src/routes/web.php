@@ -7,6 +7,8 @@ use App\Http\Controllers\SellController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TopController;
 use App\Http\Controllers\MypageController;
+use App\Http\Controllers\PurchaseController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -39,3 +41,6 @@ Route::get('top', [TopController::class, 'top']);
 
 // マイページ（マイページの表示）
 Route::get('mypage/mypage', [MypageController::class, 'mypage']);
+
+// 商品詳細ページ（商品詳細ページの表示）
+Route::get('purchase/purchase', [PurchaseController::class, 'purchase']);
