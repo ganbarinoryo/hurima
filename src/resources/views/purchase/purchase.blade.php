@@ -31,48 +31,88 @@
         </div>
     </header>
 
-<!--商品詳細-->
-<main>
-<!--商品画像-->
-    <div class="item__image">
-        <img src="" alt="商品画像">
-    </div>
-<!--商品内容-->
-    <div class="item__detail">
+    <main>
 
-        <h1>商品名</h1>
-        <p class="brand_name">ブランド名</p>
-        <p class="price">¥10,000(値段)</p>
+<!--左側-->
+<div class="left_side">
 
-        <div class="form__button">
-            <button class="form__button-submit" type="submit">購入する
-            </button>
+    <!-- 商品情報（画像と詳細） -->
+    <div class="product_info">
+
+        <!-- 商品画像 -->
+        <div class="product_image">
+            <img src="" alt="商品画像">
         </div>
 
-        <h2>商品説明</h2>
-        <div class="form__input--description">
-                    <textarea 
-                    id="product_description" 
-                    name="product_description" 
-                    class="textarea--description @error('product_description') is-invalid @enderror" 
-                    rows="5">
-                    </textarea>
-                    </div>
-
-        <div class="item__data">
-            <h2>商品の情報</h2>
-                <div class="item__category">
-                    <h3>カテゴリー</h3>
-                    <p>洋服</p>
-                    <p>メンズ</p>
-                </div>
-                <div class="item__condition">
-                    <h3>商品の状態</h3>
-                    <p>良好</p>
-                </div>
+        <!-- 商品名と価格 -->
+        <div class="product_details">
+            <h1 class="product_name">商品名</h1>
+            <p class="product_price">¥10,000</p>
         </div>
+
     </div>
-</main>
-    
+
+    <!-- 支払い方法 -->
+    <div class="payment_method">
+        <h2 class="section_title">支払い方法</h2>
+        <a href="#" class="change_link">変更する</a>
+    </div>
+
+    <!-- 配送先 -->
+    <div class="shipping_address">
+        <h2 class="section_title">配送先</h2>
+        <a href="#" class="change_link">変更する</a>
+    </div>
+
+</div>
+
+
+
+
+<!--右側-->
+    <div class="right_side">
+
+<!-- 商品情報セクション -->
+<div class="product_information">
+    <table class="product_table">
+        <!-- 商品代金 -->
+        <tr>
+            <th>商品代金</th>
+            <td>10,000</td>
+        </tr>
+        <!-- 支払い金額 -->
+        <tr>
+            <th>支払い金額</th>
+            <td>10,000</td>
+        </tr>
+        <!-- 支払い方法 -->
+        <tr>
+            <th>支払い方法</th>
+            <td>コンビニ払い</td>
+        </tr>
+        <!-- 配送先 -->
+        <tr>
+            <th>配送先</th>
+            <td>住所入力</td>
+        </tr>
+    </table>
+</div>
+
+
+
+    <div class="form__button">
+        <button class="form__button-submit" type="submit">購入する
+        </button>
+    </div>
+
+    </div>
+
+
+
+
+
+
+
+    </main>
 </body>
 </html>

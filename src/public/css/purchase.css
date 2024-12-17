@@ -77,7 +77,7 @@ body {
 .nav__link__sell {
     color: #000000;
     background-color: #fff;
-    padding: 10px 20px 10px 23px;
+    padding: 10px 20px 10px 24px;
     font-size: 17px;
     border-radius: 5px;
     text-decoration: none;
@@ -97,23 +97,164 @@ main {
     padding-top: 100px;
     padding-bottom: 100px;
     display: flex;
+    white-space: nowrap;
 }
 
-/* 商品アイテム */
-.item__image {
-    background-color: #a0a0a0;
-    min-width: 500px;
-    height: 500px;
-    margin-bottom: 25px;
-    /* 固定のサイズ */
+
+
+
+
+/* 左側エリア */
+.left_side {
+    width: 700px;
 }
 
-/* 購入ボタンのレイアウト */
-.form__button-submit {
-    width: 500px;
-    height: 57px;
-    padding: 13px;
+/* 商品情報（画像と詳細を横並び） */
+.product_info {
+    display: flex;
+    /* Flexboxを適用 */
+    align-items: center;
+    /* 縦方向の中央揃え */
+    gap: 20px;
+    /* 要素間の隙間 */
+}
+
+/* 商品画像 */
+.product_image img {
+    width: 200px;
+    height: 200px;
+    background-color: #ccc;
+    /* 画像がない場合の背景色 */
+    display: block;
+}
+
+/* 商品名と価格 */
+.product_details {
+    padding-left: 50px;
+    width: 400px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    /* 縦並び */
+    justify-content: center;
+    /* 縦方向の中央揃え */
+
+}
+
+.product_name {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.product_price {
+    color: #e60000;
+    /* 価格の色 */
+}
+
+/* 支払い方法セクション */
+.payment_method {
+    display: flex;
+    /* Flexboxを適用 */
+    justify-content: space-between;
+    /* 両端揃え（左右に配置） */
+    align-items: center;
+    /* 縦方向の中央揃え */
+    padding: 10px;
+    /* 内側の余白 */
+}
+
+/* 配送先セクション */
+.shipping_address {
+    display: flex;
+    /* Flexboxを適用 */
+    justify-content: space-between;
+    /* 両端揃え（左右に配置） */
+    align-items: center;
+    /* 縦方向の中央揃え */
+    margin: 10px 0;
+    /* 上下に余白 */
+    padding: 10px;
+    /* 内側の余白 */
+}
+
+/* タイトル */
+.section_title {
+    margin: 0;
+    /* デフォルトの余白をリセット */
+    padding-top: 75px;
+    color: #333;
+}
+
+/* 変更リンク */
+.change_link {
+    margin-top: 75px;
+    margin-right: 50px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.change_link:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 右側のレイアウト */
+.right_side {
+    min-width: 440px;
+}
+
+.product_information {
+    border: 1px solid #000000;
+    width: 100%;
+}
+
+/* テーブル全体のスタイル */
+.product_table {
+    width: 100%;
+    /* テーブルの幅を100%に設定 */
+    height: 355px;
+    border-collapse: collapse;
+    /* 枠線の重なりを統一 */
+}
+
+/* テーブルセルの枠線と余白 */
+.product_table th,
+.product_table td {
+    border: 1px solid #ccc;
+    /* 枠線を薄いグレーに */
+    padding: 20px;
+    /* セル内の余白 */
+    text-align: left;
+    /* テキストを左揃え */
+}
+
+/* テーブルヘッダーのスタイル */
+.product_table th {
+    background-color: #f5f5f5;
+    /* ヘッダーの背景色 */
     font-weight: bold;
+    /* テキストを太字に */
+    color: #333;
+    /* テキストカラー */
+}
+
+.form__button {
+    padding-top: 55px;
+}
+
+.form__button-submit {
+    width: 100%;
+    padding: 13px;
+    font-weight: 700;
     background: #FF5555;
     color: white;
     font-size: 26px;
@@ -121,55 +262,3 @@ main {
     border-radius: 4px;
     cursor: pointer;
 }
-
-/* 商品説明レイアウト */
-.item__detail {
-    margin-top: -37px;
-    margin-left: 130px;
-    background-color: rgb(255, 255, 255);
-    min-width: 500px;
-    min-height: 100%;
-    font-size: 20px;
-}
-
-/* 説明文テキストエリア */
-.textarea--description {
-    margin-top: -20px;
-    width: 100%;
-    min-height: 125px;
-    border: 1px solid #5F5F5F;
-    /* 枠線 */
-    border-radius: 5px;
-    /* 角を丸める */
-    font-size: 16px;
-    /* テキストサイズ */
-    resize: vertical;
-    /* ユーザーが縦方向に調整可能 */
-}
-
-.item__category p {
-    background-color: #D9D9D9;
-    padding-top: 5px;
-    width: 100px;
-    text-align: center;
-    border-radius: 50px;
-    margin-left: 30px;
-}
-
-.item__condition p {
-    padding-top: 5px;
-    width: 100px;
-    text-align: center;
-    border-radius: 50px;
-    margin-left: 30px;
-}
-
-.item__category {
-    display: flex;
-    
-}
-
-.item__condition {
-    display: flex;
-}
-
